@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestApp"
+             x:Class="TestApp.MainPage">
+
+    <StackLayout
+        BackgroundColor="DeepSkyBlue">
+
+        <StackLayout
+            Orientation="Horizontal"
+            Spacing="0"
+            Padding="0,10,0,10"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start"
+            BackgroundColor="White">
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Fill"
+                Spacing="0"
+                BackgroundColor="White">
+
+                <Image
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    Source="ic_sync_black.png"/>
+
+                <Label
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"
+                    Text="Sync DB"
+                    TextColor="Black"
+                    FontSize="Small" />
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapSyncDB"
+                        NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Fill"
+                BackgroundColor="White"
+                Spacing="0"
+                Orientation="Vertical">
+
+                <Image
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    Source="ic_assignment_ind_black_24dp.png"/>
+
+                <Label
+                    HorizontalOptions="Center"
+                    BackgroundColor="Transparent"
+                    Text="My Tasks"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapMyTasks"
+                        NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Fill"
+                Spacing="0"
+                BackgroundColor="White"
+                Orientation="Vertical">
+
+                <Image
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    Source="ic_search_black_24dp.png"/>
+
+                <Label
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"
+                    Text="Find"
+                    TextColor="Black"
+                    FontSize="Small"/>
+                
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapFind"
+                        NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Fill"
+                BackgroundColor="White"
+                Spacing="0"
+                Orientation="Vertical">
+
+                <Image
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    Source="ic_settings_black_24dp.png"/>
+
+                <Label
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="Center"
+                    Text="Settings"
+                    TextColor="Black"
+                    FontSize="Small"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="TapSettings"
+                        NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+
+            </StackLayout>
+            
+        </StackLayout>
+
+        <Label Text="SWMSoft"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="White"
+               x:Name="sampleLabel"
+               VerticalOptions="CenterAndExpand" 
+               HorizontalOptions="Center" />
+
+        <!--StackLayout>
+
+            <Image
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Source="user_icon2.png"
+                />
+
+            <Entry  VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"
+                    TextColor="Aqua"
+                    Text=""
+                    x:Name="username"
+                    Placeholder="Enter Username"
+                    FontSize="Large" />
+
+            <Entry VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   Placeholder="Enter Pasword"
+                   Text=""
+                   x:Name="password"
+                   TextColor ="Black"
+                   IsPassword="True"/>
+
+        </StackLayout-->
+
+        <!--Button Text="Login"
+                FontSize="Large"
+                x:Name="loginButton"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                Clicked="OnLoginClicked"/-->
+
+
+
+    </StackLayout>
+
+</ContentPage>
