@@ -13,7 +13,7 @@
             Padding="0,10,0,10"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Start"
-            BackgroundColor="Black">
+            BackgroundColor="White">
 
             <StackLayout
                 HorizontalOptions="FillAndExpand"
