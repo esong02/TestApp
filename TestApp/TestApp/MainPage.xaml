@@ -13,7 +13,7 @@
             Padding="0,10,0,10"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Start"
-            BackgroundColor="White">
+            BackgroundColor="Black">
 
             <StackLayout
                 HorizontalOptions="FillAndExpand"
@@ -23,7 +23,7 @@
 
                 <Image
                     HorizontalOptions="Fill"
-                    BackgroundColor="White"
+                    BackgroundColor="Transparent"
                     Source="ic_sync_black.png"/>
 
                 <Label
