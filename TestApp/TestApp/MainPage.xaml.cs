@@ -72,6 +72,20 @@ namespace TestApp
             sampleLabel.Text = "Settings";
         }
 
+        private void TapFacilityTab(object sender, EventArgs e)
+        {
+            tabfiller.BackgroundColor = Color.Yellow;
+        }
+
+        private void TapStructureTab(object sender, EventArgs e)
+        {
+            tabfiller.BackgroundColor = Color.GreenYellow;
+        }
+
+        private void TapLIDTab(object sender, EventArgs e)
+        {
+            tabfiller.BackgroundColor = Color.DeepSkyBlue;
+        }
 
         /*
         void OnLoginClicked(object sender, EventArgs args)
