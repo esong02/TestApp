@@ -11,26 +11,61 @@ namespace TestApp
     {
         public ObservableCollection<Asset> assets { get; set; }
 
-        public AssetViewModel()
+        public AssetViewModel(string assetType)
         {
+            if (assetType.Equals("Facility")) { 
+                assets = new ObservableCollection<Asset>
+                {
+                    new Asset
+                    {
+                        name = "Facility 1"
+                    },
+                    new Asset
+                    {
+                        name = "Facility 2"
+                    },
+                    new Asset
+                    {
+                        name = "Facility 3"
+                    }
+                };
 
-            assets = new ObservableCollection<Asset>
+            }else if (assetType.Equals("Structure"))
             {
-                new Asset
+                assets = new ObservableCollection<Asset>
                 {
-                    title = "Facility 1"
-                },
-                new Asset
+                    new Asset
+                    {
+                        name = "Structure 1"
+                    },
+                    new Asset
+                    {
+                        name = "Structure 2"
+                    },
+                    new Asset
+                    {
+                        name = "Structure 3"
+                    }
+                };
+            }else if (assetType.Equals("LID"))
+            {
+                assets = new ObservableCollection<Asset>
                 {
-                    title = "Facility 2"
-                },
-                new Asset
-                {
-                    title = "Facility 3"
-                }
-            };
+                    new Asset
+                    {
+                        name = "Site 1"
+                    },
+                    new Asset
+                    {
+                        name = "Site 2"
+                    },
+                    new Asset
+                    {
+                        name = "Site 3"
+                    }
+                };
+            }
 
-            
 
         }
     }

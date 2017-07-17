@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace TestApp
             // settings.Clicked += MenuClickHandler;
             //myTasks.Clicked += MenuClickHandler;
             //find.Clicked += MenuClickHandler;
+            var facilityList = new AssetViewModel("Facility");
+            var structureList = new AssetViewModel("Structure");
+            var lidList = new AssetViewModel("LID");
 
             var tabs = new List<Tab>
             {
@@ -34,26 +38,27 @@ namespace TestApp
                 {
                     title = "Facility",
                     tabColor = "#ffce00",
-                    asset = new AssetViewModel()
+                    asset = facilityList.assets
                 },
                 new Tab
                 {
                     title = "Structure",
                     tabColor = "#c4fd22",
-                    asset = new AssetViewModel()
+                    asset = structureList.assets
                 },
                 new Tab
                 {
                     title = "L.I.D.",
                     tabColor = "#00baf0",
-                    asset = new AssetViewModel()
+                    asset = lidList.assets
                 }
             };
 
-           
+            //var assetList = new AssetViewModel();
 
             MainCarouselView.ItemsSource = tabs;
-
+            //ListView aList = MainCarouselView.FindByName<ListView>("AssetList");
+            //aList.ItemsSource = assets;
 
         }
        

@@ -6,6 +6,6 @@ namespace TestApp
 {
     public class Asset
     {
-        public string title { get; set; }
+        public string name { get; set; }
     }
 }

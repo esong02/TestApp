@@ -234,9 +234,17 @@
                     <DataTemplate>
                         <StackLayout
                             BackgroundColor="{Binding tabColor}">
-                            <Label Text="{Binding title}"
-                               FontSize="40"
-                               HorizontalOptions="CenterAndExpand"/>
+                            <ListView x:Name="AssetList"
+                                      ItemsSource="{Binding asset}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextCell Text="{Binding name}"
+                                                  IsEnabled="True"
+                                                  TextColor="Black"/>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                            
                         </StackLayout>
                     </DataTemplate>
                 </forms:CarouselView.ItemTemplate>

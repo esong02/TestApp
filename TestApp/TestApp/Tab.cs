@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Collections.ObjectModel;
 
 namespace TestApp
 {
@@ -8,7 +9,7 @@ namespace TestApp
     {
         public string title { get; set; }
         public string tabColor { get; set; }
-        public AssetViewModel asset { get; set; }
+        public ObservableCollection<Asset> asset { get; set; }
        
     }
 }
