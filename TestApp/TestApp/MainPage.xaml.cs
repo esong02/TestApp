@@ -57,7 +57,9 @@ namespace TestApp
             //var assetList = new AssetViewModel();
 
             MainCarouselView.ItemsSource = tabs;
-            //ListView aList = MainCarouselView.FindByName<ListView>("AssetList");
+            ListView aList = MainCarouselView.FindByName<ListView>("AssetList");
+
+            
             //aList.ItemsSource = assets;
 
         }
@@ -90,22 +92,22 @@ namespace TestApp
 
         private void TapSyncDB(object sender, EventArgs e)
         {
-            sampleLabel.Text = "Sync DB";
+            //sampleLabel.Text = "Sync DB";
         }
 
         private void TapMyTasks(object sender, EventArgs e)
         {
-            sampleLabel.Text = "My Tasks";
+            //sampleLabel.Text = "My Tasks";
         }
 
         private void TapFind(object sender, EventArgs e)
         {
-            sampleLabel.Text = "Find";
+            //sampleLabel.Text = "Find";
         }
 
         private void TapSettings(object sender, EventArgs e)
         {
-            sampleLabel.Text = "Settings";
+            //sampleLabel.Text = "Settings";
         }
 
 
@@ -150,8 +152,8 @@ namespace TestApp
 
         private void MainCarouselViewItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            sampleLabel.Text = sender.ToString();
-            sampleLabel.Text = e.SelectedItem as string;
+            //sampleLabel.Text = sender.ToString();
+            //sampleLabel.Text = e.SelectedItem as string;
 
             /*
             if (MainCarouselView.Position == 0)
@@ -170,6 +172,19 @@ namespace TestApp
             }
             */
 
+        }
+
+        private void OnSelection(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            ListView lv = sender as ListView;
+            
+
+            DisplayAlert("Item Selected: ", lv.SelectedItem.ToString(),"Ok");
         }
 
         /*

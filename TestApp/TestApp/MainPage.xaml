@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TestApp"
              xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:flipper="clr-namespace:ViewFlipper.FormsPlugin.Abstractions;assembly=ViewFlipper.FormsPlugin.Abstractions"
              x:Class="TestApp.MainPage">
 
     <StackLayout
@@ -233,31 +234,43 @@
                 <forms:CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout
-                            BackgroundColor="{Binding tabColor}">
+                            BackgroundColor="{Binding tabColor}"
+                            Padding="5"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand">
                             <ListView x:Name="AssetList"
+                                      ItemSelected="OnSelection"
+                                      RowHeight="75"
                                       ItemsSource="{Binding asset}">
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <TextCell Text="{Binding name}"
-                                                  IsEnabled="True"
-                                                  TextColor="Black"/>
+                                        <ViewCell>
+                                                
+                                            <StackLayout
+                                                Orientation="Horizontal"
+                                                BackgroundColor="Transparent"
+                                                Margin="5,5,5,5"
+                                                VerticalOptions="FillAndExpand"
+                                                HorizontalOptions="FillAndExpand">
+                                                <Label Text="{Binding nameID}"
+                                                       VerticalOptions="Start"
+                                                       FontSize="18"
+                                                       TextColor="Black"
+                                                       Margin="5,5,5,5"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </StackLayout>
+                                        
+                                        
+                                        </ViewCell>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
-                            
+
                         </StackLayout>
                     </DataTemplate>
                 </forms:CarouselView.ItemTemplate>
             </forms:CarouselView>
 
-            <Label Text="SWMSoft"
-                   FontSize="Large"
-                   FontAttributes="Bold"
-                   TextColor="Black"
-                   x:Name="sampleLabel"
-                   VerticalOptions="End" 
-                   HorizontalOptions="Center" />
-                
         </StackLayout>
 
     </StackLayout>
