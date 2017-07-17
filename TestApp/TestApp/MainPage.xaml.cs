@@ -16,7 +16,7 @@ namespace TestApp
 		{
 			InitializeComponent();
             
-            facilityTab.BackgroundColor = Color.FromHex("ffce00");
+            facilityTab.BackgroundColor = Color.FromHex("#ffce00");
             structureTab.BackgroundColor = Color.FromHex("#c4fd22");
             lidTab.BackgroundColor = Color.FromHex("#00baf0");
 
@@ -27,6 +27,32 @@ namespace TestApp
             // settings.Clicked += MenuClickHandler;
             //myTasks.Clicked += MenuClickHandler;
             //find.Clicked += MenuClickHandler;
+
+            var tabs = new List<Tab>
+            {
+                new Tab
+                {
+                    title = "Facility",
+                    tabColor = "#ffce00",
+                    asset = new AssetViewModel()
+                },
+                new Tab
+                {
+                    title = "Structure",
+                    tabColor = "#c4fd22",
+                    asset = new AssetViewModel()
+                },
+                new Tab
+                {
+                    title = "L.I.D.",
+                    tabColor = "#00baf0",
+                    asset = new AssetViewModel()
+                }
+            };
+
+           
+
+            MainCarouselView.ItemsSource = tabs;
 
 
         }
@@ -81,19 +107,22 @@ namespace TestApp
         //Tabs
         private void TapFacilityTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.FromHex("ffce00");
-            AssetList = new ListView();
+            MainCarouselView.Position = 0;
+            //tabfiller.BackgroundColor = Color.FromHex("ffce00");
+            /*AssetList = new ListView();
             AssetList.ItemsSource = new String[]
             {
                 "Facility 1",
                 "Facility 2",
                 "Facility 3"
             };
+            */
         }
 
         private void TapStructureTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.FromHex("#c4fd22");
+            //tabfiller.BackgroundColor = Color.FromHex("#c4fd22");
+            MainCarouselView.Position = 1;
             /*AssetList.ItemsSource = new String[]
             {
                 "Structure 1",
@@ -104,13 +133,38 @@ namespace TestApp
 
         private void TapLIDTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.FromHex("#00baf0");
+            //tabfiller.BackgroundColor = Color.FromHex("#00baf0");
+            MainCarouselView.Position = 2;
             /*AssetList.ItemsSource = new String[]
             {
                 "Site 1",
                 "Site 2",
                 "Site 3"
             };*/
+        }
+
+        private void MainCarouselViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            sampleLabel.Text = sender.ToString();
+            sampleLabel.Text = e.SelectedItem as string;
+
+            /*
+            if (MainCarouselView.Position == 0)
+            {
+                tabfiller.BackgroundColor = Color.FromHex("ffce00");
+            }else if (MainCarouselView.Position == 1)
+            {
+                tabfiller.BackgroundColor = Color.FromHex("#c4fd22");
+            }else if (MainCarouselView.Position == 2)
+            {
+                tabfiller.BackgroundColor = Color.FromHex("#00baf0");
+            }
+            else
+            {
+                sampleLabel.Text = "Error: Tab Postion not found";
+            }
+            */
+
         }
 
         /*

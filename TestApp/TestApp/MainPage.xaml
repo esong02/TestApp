@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:TestApp"
+             xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              x:Class="TestApp.MainPage">
 
     <StackLayout
@@ -219,32 +220,39 @@
 
         </Grid>
 
+        <!--CarouselView/TabLayout -->
+
         <StackLayout
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand"
-            BackgroundColor="Black"
+            BackgroundColor="Transparent"
             x:Name="tabfiller">
 
-            <ListView x:Name="AssetList"
-                      BackgroundColor="Transparent">
-
-            </ListView>
+            <forms:CarouselView x:Name="MainCarouselView"
+                                ItemSelected="MainCarouselViewItemSelected">
+                <forms:CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                            BackgroundColor="{Binding tabColor}">
+                            <Label Text="{Binding title}"
+                               FontSize="40"
+                               HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </forms:CarouselView.ItemTemplate>
+            </forms:CarouselView>
 
             <Label Text="SWMSoft"
                    FontSize="Large"
                    FontAttributes="Bold"
-                   TextColor="White"
+                   TextColor="Black"
                    x:Name="sampleLabel"
-                   VerticalOptions="CenterAndExpand" 
+                   VerticalOptions="End" 
                    HorizontalOptions="Center" />
-
-            
-            
+                
         </StackLayout>
 
     </StackLayout>
-
-  
 
 </ContentPage>
 

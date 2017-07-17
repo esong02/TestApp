@@ -4,8 +4,11 @@ using System.Text;
 
 namespace TestApp
 {
-    public class Asset
+    class Tab
     {
         public string title { get; set; }
+        public string tabColor { get; set; }
+        public AssetViewModel asset { get; set; }
+       
     }
 }

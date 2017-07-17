@@ -18,18 +18,15 @@ namespace TestApp
             {
                 new Asset
                 {
-                    tabColor = "Yellow",
-                    Title = "Facility 1"
+                    title = "Facility 1"
                 },
                 new Asset
                 {
-                    tabColor = "Green",
-                    Title = "Facility 2"
+                    title = "Facility 2"
                 },
                 new Asset
                 {
-                    tabColor = "Blue",
-                    Title = "Facility 3"
+                    title = "Facility 3"
                 }
             };
 
