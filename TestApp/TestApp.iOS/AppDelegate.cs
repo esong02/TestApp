@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 using Foundation;
 using UIKit;
@@ -23,7 +24,11 @@ namespace TestApp.iOS
 		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 		{
 			global::Xamarin.Forms.Forms.Init ();
-			LoadApplication (new TestApp.App ());
+
+            //var cv = typeof(Xamarin.Forms.CarouselView);
+            //Assembly.Load(cv.FullName);
+
+            LoadApplication (new TestApp.App ());
 
 			return base.FinishedLaunching (app, options);
 		}

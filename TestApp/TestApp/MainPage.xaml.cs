@@ -15,11 +15,16 @@ namespace TestApp
 		public MainPage()
 		{
 			InitializeComponent();
-
             
+            facilityTab.BackgroundColor = Color.FromHex("ffce00");
+            structureTab.BackgroundColor = Color.FromHex("#c4fd22");
+            lidTab.BackgroundColor = Color.FromHex("#00baf0");
+
+            tabfiller.BackgroundColor = Color.FromHex("ffce00");
+
 
             //syncDB.Clicked += MenuClickHandler;
-           // settings.Clicked += MenuClickHandler;
+            // settings.Clicked += MenuClickHandler;
             //myTasks.Clicked += MenuClickHandler;
             //find.Clicked += MenuClickHandler;
 
@@ -72,19 +77,40 @@ namespace TestApp
             sampleLabel.Text = "Settings";
         }
 
+
+        //Tabs
         private void TapFacilityTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.Yellow;
+            tabfiller.BackgroundColor = Color.FromHex("ffce00");
+            AssetList = new ListView();
+            AssetList.ItemsSource = new String[]
+            {
+                "Facility 1",
+                "Facility 2",
+                "Facility 3"
+            };
         }
 
         private void TapStructureTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.GreenYellow;
+            tabfiller.BackgroundColor = Color.FromHex("#c4fd22");
+            /*AssetList.ItemsSource = new String[]
+            {
+                "Structure 1",
+                "Structure 2",
+                "Structure 3"
+            };*/
         }
 
         private void TapLIDTab(object sender, EventArgs e)
         {
-            tabfiller.BackgroundColor = Color.DeepSkyBlue;
+            tabfiller.BackgroundColor = Color.FromHex("#00baf0");
+            /*AssetList.ItemsSource = new String[]
+            {
+                "Site 1",
+                "Site 2",
+                "Site 3"
+            };*/
         }
 
         /*

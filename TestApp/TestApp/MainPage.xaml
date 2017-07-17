@@ -139,7 +139,7 @@
         </Grid>
 
         <!--Tabs -->
-        
+
         <Grid
             VerticalOptions="Start"
             HorizontalOptions="FillAndExpand"
@@ -156,7 +156,7 @@
 
             <StackLayout
                 HorizontalOptions="FillAndExpand"
-                BackgroundColor="Yellow"
+                x:Name="facilityTab"
                 Padding="0,10,0,10"
                 Grid.Row="0"
                 Grid.Column="0">
@@ -172,12 +172,12 @@
                         Tapped="TapFacilityTab"
                         NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
-                
+
             </StackLayout>
 
             <StackLayout
                 HorizontalOptions="FillAndExpand"
-                BackgroundColor="GreenYellow"
+                x:Name="structureTab"
                 Padding="0,10,0,10"
                 Grid.Row="0"
                 Grid.Column="1">
@@ -198,7 +198,7 @@
 
             <StackLayout
                 HorizontalOptions="FillAndExpand"
-                BackgroundColor="DeepSkyBlue"
+                x:Name="lidTab"
                 Padding="0,10,0,10"
                 Grid.Row="0"
                 Grid.Column="2">
@@ -214,18 +214,22 @@
                         Tapped="TapLIDTab"
                         NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
-                
+
             </StackLayout>
 
         </Grid>
-
 
         <StackLayout
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand"
             BackgroundColor="Black"
             x:Name="tabfiller">
-        
+
+            <ListView x:Name="AssetList"
+                      BackgroundColor="Transparent">
+
+            </ListView>
+
             <Label Text="SWMSoft"
                    FontSize="Large"
                    FontAttributes="Bold"
