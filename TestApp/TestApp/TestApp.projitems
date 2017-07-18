@@ -13,11 +13,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Asset.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AssetTab.xaml.cs">
-      <DependentUpon>AssetTab.xaml</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)AssetViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InspectionPage.xaml.cs">
+      <DependentUpon>InspectionPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)AssetViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -34,7 +34,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AssetTab.xaml">
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)InspectionPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

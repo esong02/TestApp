@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:TestApp"
              xmlns:forms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:flipper="clr-namespace:ViewFlipper.FormsPlugin.Abstractions;assembly=ViewFlipper.FormsPlugin.Abstractions"
-             x:Class="TestApp.MainPage">
+             x:Class="TestApp.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
     <StackLayout
         BackgroundColor="Black"

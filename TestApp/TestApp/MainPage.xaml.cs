@@ -16,7 +16,6 @@ namespace TestApp
 		public MainPage()
 		{
 			InitializeComponent();
-            
             facilityTab.BackgroundColor = Color.FromHex("#ffce00");
             structureTab.BackgroundColor = Color.FromHex("#c4fd22");
             lidTab.BackgroundColor = Color.FromHex("#00baf0");
@@ -181,12 +180,20 @@ namespace TestApp
 
         private void InspectionsTapped(object sender, EventArgs e)
         {
-
+            OnCallInspectionPage();
         }
 
         private void InfoTapped(object sender, EventArgs e)
         {
 
+        }
+
+        async void OnCallInspectionPage()
+        {
+            //var iP = new NavigationPage (new InspectionPage());
+            //iP.BarBackgroundColor = Color.GreenYellow;
+            await Navigation.PushAsync(new InspectionPage());
+            //await Navigation.PushAsync(iP);
         }
 
         /*

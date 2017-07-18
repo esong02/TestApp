@@ -13,7 +13,23 @@ namespace TestApp
 		{
 			InitializeComponent();
 
-			MainPage = new TestApp.MainPage();
+            /*
+            var navPage = new NavigationPage(new MainPage());
+            navPage.BindingContext = new { BarColor = Color.Transparent };
+            navPage.SetBinding(NavigationPage.BarBackgroundColorProperty, new Binding("BarColor"));
+
+            this.MainPage = navPage;
+            */
+
+            MainPage = new NavigationPage(new MainPage());
+            /*
+            {
+                BarBackgroundColor = Color.Transparent,
+                BarTextColor = Color.Black
+            };
+            */
+            //MainPage.BarBackgroundColor = Color.White;
+            //MainPage.BarTextColor = Color.Black;
 		}
 
 		protected override void OnStart ()
