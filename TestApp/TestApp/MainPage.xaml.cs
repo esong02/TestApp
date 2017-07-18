@@ -174,6 +174,22 @@ namespace TestApp
 
         }
 
+        private void RecordsTapped(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InspectionsTapped(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InfoTapped(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
         private void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
@@ -186,6 +202,7 @@ namespace TestApp
 
             DisplayAlert("Item Selected: ", lv.SelectedItem.ToString(),"Ok");
         }
+        */
 
         /*
         void OnLoginClicked(object sender, EventArgs args)

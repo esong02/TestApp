@@ -63,7 +63,7 @@ namespace TestApp
                     },
                     new Asset
                     {
-                        name = "Thornhill/Vaughan Community - Pond D (Maryta Payne Park)",
+                        name = "Thornhill/Vaughan Community",
                         id = "15"
                     },
                     new Asset
