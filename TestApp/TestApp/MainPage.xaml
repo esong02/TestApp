@@ -257,7 +257,9 @@
                                                 Margin="5,5,5,5"
                                                 VerticalOptions="FillAndExpand"
                                                 HorizontalOptions="FillAndExpand">
+                                                
                                                 <Label Text="{Binding nameID}"
+                                                       x:Name="AssetItem"
                                                        VerticalOptions="Start"
                                                        FontSize="18"
                                                        TextColor="Black"
@@ -318,6 +320,7 @@
                                                         <Image
                                                             HorizontalOptions="CenterAndExpand"
                                                             Aspect="AspectFit"
+                                                            x:Name="{Binding nameID}"
                                                             Source="ic_assignment_late_black_24dp.png">
                                                             <Image.GestureRecognizers>
                                                                 <TapGestureRecognizer

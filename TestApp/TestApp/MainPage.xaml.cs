@@ -22,7 +22,7 @@ namespace TestApp
 
             tabfiller.BackgroundColor = Color.FromHex("ffce00");
 
-
+            
             //syncDB.Clicked += MenuClickHandler;
             // settings.Clicked += MenuClickHandler;
             //myTasks.Clicked += MenuClickHandler;
@@ -180,7 +180,9 @@ namespace TestApp
 
         private void InspectionsTapped(object sender, EventArgs e)
         {
-            OnCallInspectionPage();
+            
+            
+            OnCallInspectionPage(true);
         }
 
         private void InfoTapped(object sender, EventArgs e)
@@ -188,11 +190,12 @@ namespace TestApp
 
         }
 
-        async void OnCallInspectionPage()
+        async void OnCallInspectionPage(Boolean b)
         {
             //var iP = new NavigationPage (new InspectionPage());
+
             //iP.BarBackgroundColor = Color.GreenYellow;
-            await Navigation.PushAsync(new InspectionPage());
+            await Navigation.PushAsync(new InspectionPage(MainCarouselView.Position));
             //await Navigation.PushAsync(iP);
         }
 
